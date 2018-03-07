@@ -4,12 +4,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'contactmanager',
+    loadChildren:
+      './contact-manager/contact-manager.module#ContactManagerModule'
+  },
+  {
     path: 'demo',
     loadChildren: './demo/demo.module#DemoModule'
   },
   {
     path: '**',
-    redirectTo: 'demo'
+    redirectTo: 'contactmanager'
   }
 ];
 
