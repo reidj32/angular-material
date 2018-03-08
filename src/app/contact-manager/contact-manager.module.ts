@@ -1,16 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MaterialModule } from '../shared/material.module';
 import { ContactManagerRoutingModule } from './contact-manager-routing.module';
 import { ContactManagerComponent } from './contact-manager.component';
 import { MainContentComponent } from './main-content/main-content.component';
+import { NewContactDialogComponent } from './new-contact-dialog/new-contact-dialog.component';
+import { NotesComponent } from './notes/notes.component';
 import { SideNavComponent } from './sidenav/sidenav.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { UserService } from './user.service';
-import { NotesComponent } from './notes/notes.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { NotesComponent } from './notes/notes.component';
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
+    ReactiveFormsModule,
     ContactManagerRoutingModule
   ],
   declarations: [
@@ -25,8 +27,10 @@ import { NotesComponent } from './notes/notes.component';
     ToolbarComponent,
     MainContentComponent,
     SideNavComponent,
-    NotesComponent
+    NotesComponent,
+    NewContactDialogComponent
   ],
-  providers: [UserService]
+  providers: [UserService],
+  entryComponents: [NewContactDialogComponent]
 })
 export class ContactManagerModule {}
