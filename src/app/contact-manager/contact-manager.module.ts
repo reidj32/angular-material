@@ -10,6 +10,7 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { SideNavComponent } from './sidenav/sidenav.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { UserService } from './user.service';
+import { NotesComponent } from './notes/notes.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { UserService } from './user.service';
     ContactManagerComponent,
     ToolbarComponent,
     MainContentComponent,
-    SideNavComponent
+    SideNavComponent,
+    NotesComponent
   ],
   providers: [UserService]
 })
