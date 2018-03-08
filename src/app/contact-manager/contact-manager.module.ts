@@ -9,6 +9,7 @@ import { ContactManagerComponent } from './contact-manager.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { SideNavComponent } from './sidenav/sidenav.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { UserService } from './user.service';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     ToolbarComponent,
     MainContentComponent,
     SideNavComponent
-  ]
+  ],
+  providers: [UserService]
 })
 export class ContactManagerModule {}

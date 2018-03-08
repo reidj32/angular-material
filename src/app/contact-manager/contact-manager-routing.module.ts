@@ -8,7 +8,10 @@ const routes: Routes = [
   {
     path: '',
     component: ContactManagerComponent,
-    children: [{ path: '', component: MainContentComponent }]
+    children: [
+      { path: ':id', component: MainContentComponent },
+      { path: '', component: MainContentComponent }
+    ]
   },
   {
     path: '**',
